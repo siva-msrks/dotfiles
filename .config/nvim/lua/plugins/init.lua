@@ -61,7 +61,8 @@ return {
   {
     "mfussenegger/nvim-dap",
     config = function()
-      require("configs.dap")
+      require("configs.dap-ext")
+      require("configs.dap-c-cpp")
     end,
   },
 
