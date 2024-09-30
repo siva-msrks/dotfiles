@@ -120,6 +120,7 @@ return {
     --         colorscheme = "nordic",
     --     },
     -- },
+    --
     {
         "askfiy/visual_studio_code",
         lazy = false,
