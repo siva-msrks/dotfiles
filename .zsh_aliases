@@ -1,4 +1,4 @@
 alias c='clear'
 alias vi='nvim'
 alias cdrah='cd /rah'
-alias dotfiles_git_bare_prefix='/usr/bin/git --git-dir=/home/msrks/.dotfiles/ --work-tree=/home/msrks'
+alias dotfiles_git_bare_prefix='/usr/bin/git --git-dir=/mwdata/my_space/.dotfiles/ --work-tree=/home/msrks'

@@ -10,7 +10,6 @@ return {
             c = { "clang-format" },
             cpp = { "clang-format" },
             lua = { "stylua" },
-            python = { "ruff" },
             sh = { "shfmt" },
             css = { "prettier" },
             html = { "prettier" },
@@ -28,15 +27,6 @@ return {
                         IndentAccessModifiers: true, \
                         PackConstructorInitializers: Never \
                     }",
-                },
-            },
-
-            -- Python specific configuration
-            ["ruff"] = {
-                prepend_args = {
-                    "--fast",
-                    "--line-length",
-                    "189",
                 },
             },
         },
