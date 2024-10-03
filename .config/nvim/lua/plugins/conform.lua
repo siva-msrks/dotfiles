@@ -9,10 +9,11 @@ return {
         formatters_by_ft = {
             c = { "clang-format" },
             cpp = { "clang-format" },
-            lua = { "stylua" },
-            sh = { "shfmt" },
             css = { "prettier" },
             html = { "prettier" },
+            lua = { "stylua" },
+            python = { "ruff" },
+            sh = { "shfmt" },
         },
 
         formatters = {
@@ -27,6 +28,15 @@ return {
                         IndentAccessModifiers: true, \
                         PackConstructorInitializers: Never \
                     }",
+                },
+            },
+
+            -- Python specific configuration
+            ["ruff"] = {
+                prepend_args = {
+                    "--fast",
+                    "--line-length",
+                    "189",
                 },
             },
         },
