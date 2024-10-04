@@ -1,5 +1,5 @@
 # Update $PATH environment variable.
-export PATH=$PATH:$HOME/bin:/usr/local/bin:/usr/bin:/bin:/mwdata/work_space/bin:/opt/nvim-linux64/bin:~/.oes-dev:$HOME/.local/bin
+export PATH=$PATH:$HOME/bin:/usr/local/bin:/usr/bin:/bin:/rah/bin:/opt/nvim-linux64/bin:~/.oes-dev:$HOME/.local/bin
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/msrks/.oh-my-zsh"
@@ -19,7 +19,7 @@ export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 # If set to an empty array, this variable will have no effect.
 # ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
-PROMPT='[%F{blue}msrks%f%B%F{black} :: %f%F{red}ot%f - %b%F{130}%1~%f]>> '
+PROMPT='[%F{blue}msrks%f%B%F{black} :: %f%F{red}dv5481%f - %b%F{130}%1~%f]>> '
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -128,63 +128,6 @@ export EDITOR='nvim'
 
 alias c='clear'
 alias vi='nvim'
-alias txz='tar -xvzf'
-alias txj='tar -xvjf'
-alias cdsa='cd /mwdata/work_space/afp/src/svn_work_flows/server'
-alias cdga='cd /mwdata/work_space/afp/src/git_work_flows/afp_all/afp-server'
-alias cdsc='cd /mwdata/work_space/cifs/src/svn_work_flows/server'
-alias cdgc='cd /mwdata/work_space/cifs/src/git_work_flows/cifs_all/novell-cifs'
-alias cdgu='cd /mwdata/work_space/umc/src/git_work_flows/umc-aspects'
-alias cdgncs='cd /mwdata/work_space/ncs/src/git_work_flows/ncs_all'
-alias cdgnrm='cd /mwdata/work_space/nrm/src/git_work_flows/novell-nrm'
-alias cdf='cd /mwdata/work_space/pureftpd/src/server'
-alias cdb='cd /mwdata/work_space/BBS'
-alias cdaqi='cd /mwdata/work_space/afp/qa_issues'
-alias cdaci='cd /mwdata/work_space/afp/customer_issues'
-alias cdcqi='cd /mwdata/work_space/cifs/qa_issues'
-alias cdcci='cd /mwdata/work_space/cifs/customer_issues'
-alias cdct='cd /mwdata/work_space/cifs/tests'
-alias cdca='cd /mwdata/my_space/code_arena'
-alias cdg='cd /mwdata/work_space/glibc/'
-alias cdcdd='cd /mwdata/my_space/code_arena/hackfest/2018-oes-cdd'
-alias cdds='cd /mwdata/work_space/scripts'
-
-alias sshp='ssh -X ssivaramakrishna@oes-ptf.blr.novell.com'
-
-function sshr() { ssh -X root@164.99.$1 ; }
-function sshpr() { ssh -X root@10.200.$1 ; }
-function mlc() { grep -e ^[+-] $1 | wc -l ; }
-function tz() { tar -zvcf "$1.tar.gz" "$1/" ; }
-function tz2() { tar -zvcf "$1".tar.gz "$2" ; }
-
-function scpumc() {
-	cd /mwdata/work_space/umc/src/git_work_flows/
-	tar -zvcf umc-aspects.tar.gz umc-aspects
-	echo ""
-	echo "executing \"scp -p $1 umc-aspects.tar.gz root@164.99.117.$2:~/\""
-	echo ""
-	scp -P $1 umc-aspects.tar.gz root@164.99.117.$2:~/
-	echo ""
-	date
-	echo ""
-}
-
-function lscpumc() { cd /mwdata/work_space/umc/src/git_work_flows/; tar -zvcf umc-aspects.tar.gz umc-aspects; scp umc-aspects.tar.gz root@10.0.2.107:~/ }
-
-# tmuxp yaml configs
-function lwp() { tmuxp load /mwdata/my_space/tmux-sessions/w-$1.yaml }
-function lcap() { tmuxp load /mwdata/my_space/tmux-sessions/ca.yaml }
-
-function losp() {
-	case "$1" in
-		'ws')
-			tmuxp load /mwdata/my_space/tmux-sessions/os-wireshark.yaml
-			;;
-		'samba')
-			tmuxp load /mwdata/my_space/tmux-sessions/os-samba.yaml
-			;;
-	esac
-}
 
 ulimit -c unlimited
 
