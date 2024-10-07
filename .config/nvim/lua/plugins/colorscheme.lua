@@ -121,16 +121,30 @@ return {
     --     },
     -- },
     --
+    -- {
+    --     "askfiy/visual_studio_code",
+    --     lazy = false,
+    --     priority = 1000,
+    -- },
+    --
+    -- {
+    --     "LazyVim/LazyVim",
+    --     opts = {
+    --         colorscheme = "visual_studio_code",
+    --     },
+    -- },
     {
-        "askfiy/visual_studio_code",
-        lazy = false,
+        "rockyzhang24/arctic.nvim",
+        dependencies = { "rktjmp/lush.nvim" },
+        name = "arctic",
+        branch = "v2",
         priority = 1000,
     },
 
     {
         "LazyVim/LazyVim",
         opts = {
-            colorscheme = "visual_studio_code",
+            colorscheme = "arctic",
         },
     },
 }
